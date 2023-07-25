@@ -1,54 +1,54 @@
 {
-  "name": "landing_page",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.39",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "start-server": "node ./dist/server/server.js",
-    "build-client": "node node_modules/react-scripts/scripts/build.js",
-    "build-server": "tsc --project ./tsconfig.server.json --outDir ./dist & cp -r ./server/data ./dist/server",
-    "test-client": "jest src",
-    "test-server": "jest server/__tests__",
-    "test-client:coverage": "jest src --coverage --updateSnapshot",
-    "test-server:coverage": "jest server --coverage",
-    "test:ci": "jest --ci --coverage --updateSnapshot",
-    "eject": "react-scripts eject",
-    "lint": "eslint src server",
-    "lint:fix": "eslint src server --fix",
-    "lint:report": "eslint src server --config .eslint.json --output-file ./eslint-report.json --format json src",
-    "format": "eslint src server --fix & prettier --write **/*.{.js,jsx,ts,tsx,json}"
-
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "landing_page",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.5.2",
+        "@types/node": "^16.18.39",
+        "@types/react": "^18.2.15",
+        "@types/react-dom": "^18.2.7",
+        "prettier": "^3.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "5.0.1",
+        "typescript": "^4.9.5",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "start-client": "react-scripts start",
+        "start-server": "node ./dist/server/server.js",
+        "build-client": "node node_modules/react-scripts/scripts/build.js",
+        "build-server": "tsc --project ./tsconfig.server.json --outDir ./dist & cp -r ./server/data ./dist/server",
+        "test-client": "jest src",
+        "test-server": "jest server/__tests__",
+        "test-client:coverage": "jest src --coverage --updateSnapshot",
+        "test-server:coverage": "jest server --coverage",
+        "test:ci": "jest --ci --coverage --updateSnapshot",
+        "eject": "react-scripts eject",
+        "lint": "eslint src ",
+        "lint:fix": "eslint src ",
+        "lint:report": "eslint src .eslint.json --output-file ./eslint-report.json --format json src",
+        "format": "eslint src & prettier --write **/*.{.js,jsx,ts,tsx,json}"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }

@@ -1,0 +1,18 @@
+@import '../../styles/constants.scss';
+@import '../../styles/colors.scss';
+
+.navbar__container {
+    border: 2px solid pink;
+    height: $navbar-height;
+    background-color: $grey-navbar;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__container--menu {
+    .menu__list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+    }
+}

@@ -1,14 +1,16 @@
 // general
 export const PATH_TO_ICON = 'icons/';
 export const ICON_EXTENSION = '.svg';
+export const BLANK = '_blank';
 
 //Navbar
-export const NAME = 'Anna ';
-export const LAST_NAME = 'Raczyńska';
+export const NAME = 'ANNA ';
+// export const LAST_NAME = 'Raczyńska';
+export const LAST_NAME = 'RACZYŃSKA';
 export const HOME = 'Home';
+export const ABOUT = 'About Me';
 export const PORTFOLIO = 'Portfolio';
 export const CODEWARS = 'Codewars';
-export const CONTACT = 'Contact Me';
 
 //Intro Section
 export const TEXT_HELLO = 'Hello, I am Anna';

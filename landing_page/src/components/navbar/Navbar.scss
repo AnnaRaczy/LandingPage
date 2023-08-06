@@ -34,17 +34,27 @@
 }
 
 .navbar__container--menu {
+    @include flex(row, flex-end, center);
     width: 50%;
 
     .menu__list {
         @include flex(row, flex-end, center);
         list-style-type: none;
-        margin-right: 20px;
+        margin-right: 5px;
 
         &--item {
-            padding: 20px;
+            padding: 3px 20px;
+            text-decoration: none;
+            color: $white-common;
             font-size: 0.8em;
             letter-spacing: 0.1em;
         }
+
+        &--item:hover {
+            cursor: pointer;
+        }
+    }
+    .codewars--badge {
+        padding-right: 20px;
     }
 }

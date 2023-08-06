@@ -1,0 +1,28 @@
+@import '../../../styles/constants.scss';
+@import '../../../styles/colors.scss';
+@import '../../../styles/common.scss';
+@import '../../../styles/fonts.scss';
+
+.intro__container {
+    height: $introSection-height;
+    border-bottom: 5px solid rgb(171, 168, 189);
+    @include flex(row, center, center);
+
+    &--text {
+        width: 50%;
+        padding-top: 8em;
+        border: 1px solid black;
+        padding: 60px;
+        font-family: $montserrat;
+        letter-spacing: 0.05em;
+    }
+
+    .text--hello {
+        font-size: 2em;
+        font-weight: 300;
+    }
+
+    &--photo {
+        width: 50%;
+    }
+}

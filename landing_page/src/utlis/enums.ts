@@ -13,3 +13,10 @@ export enum Address {
     LINKEDIN = 'https://www.linkedin.com/',
     EMAIL = '',
 }
+
+export enum Menu {
+    HOME = '/',
+    ABOUT = '/',
+    PORTFOLIO = '/',
+    CODEWARS = 'https://www.codewars.com/users/ann@r/completed_solutions',
+}

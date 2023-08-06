@@ -4,21 +4,42 @@ import * as enums from '../../utlis/enums';
 import { Icon } from '../common/icon';
 import './Navbar.scss';
 
-const Menu: React.FC = () => {
-    const listElements = [
-        constants.HOME,
-        constants.ABOUT,
-        constants.PORTFOLIO,
-        constants.CODEWARS,
-    ];
+const Badge: React.FC = () => {
     return (
-        <ul className="menu__list">
-            {listElements.map((listElement, i) => (
-                <li key={i} className="menu__list--item">
-                    {listElement}
-                </li>
-            ))}
-        </ul>
+        <img
+            alt="codewars"
+            src="https://www.codewars.com/users/ann@r/badges/micro"
+            className="codewars--badge"
+        />
+    );
+};
+
+const Menu: React.FC = () => {
+    const listElements = {
+        HOME: constants.HOME,
+        ABOUT: constants.ABOUT,
+        PORTFOLIO: constants.PORTFOLIO,
+        CODEWARS: constants.CODEWARS,
+    };
+
+    return (
+        <>
+            <ul className="menu__list">
+                {(
+                    Object.keys(listElements) as (keyof typeof listElements)[]
+                ).map((listElement, i) => (
+                    <a
+                        key={i}
+                        href={enums.Menu[listElement]}
+                        target={constants.BLANK}
+                        className="menu__list--item"
+                    >
+                        <li key={i}>{listElement}</li>
+                    </a>
+                ))}
+            </ul>
+            <Badge />
+        </>
     );
 };
 
@@ -31,7 +52,7 @@ const ContactIcons: React.FC = () => {
         height: '20px',
     };
 
-    const handleMouseOver = (event: MouseEvent<HTMLImageElement>) => {
+    const handleMouseOver = async (event: MouseEvent<HTMLImageElement>) => {
         if (event) {
             setActive(event.currentTarget.alt);
         }
@@ -51,11 +72,11 @@ const ContactIcons: React.FC = () => {
         LINKEDIN:
             active !== enums.IconsNormal.LINKEDIN
                 ? enums.IconsNormal.LINKEDIN
-                : enums.IconsHover.GITHUB,
+                : enums.IconsHover.LINKEDIN,
         EMAIL:
             active !== enums.IconsNormal.EMAIL
                 ? enums.IconsNormal.EMAIL
-                : enums.IconsHover.GITHUB,
+                : enums.IconsHover.EMAIL,
     };
 
     return (

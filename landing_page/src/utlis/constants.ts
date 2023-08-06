@@ -16,7 +16,7 @@ export const CODEWARS = 'Codewars';
 export const TEXT_HELLO = 'Hello, I am Anna';
 export const TEXT_DEVELOPER = 'Frontend Developer';
 export const TEXT_INTRODUCTION =
-    'I design and create websites in JavaScript React environment...';
+    'I design and create websites in JavaScript React environment... Varius quam quisque id diam vel quam Justo nec ultrices dui sapien eget mi proin sed. Mauris sit amet massa vitae. Mattis enim ut tellus elementum sagittis vitae. Felis bibendum ut tristique et egestas. Libero id faucibus nisl tincidunt eget nullam non nisi.Auctor augue mauris augue neque gravida in fermentum et. Nulla facilisi cras fermentum odio eu feugiat pretium. Laoreet sit amet cursus sit amet dictum sit.';
 
 // Details Section
 export const ABOUT_ME = 'ABOUT ME';

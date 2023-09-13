@@ -1,0 +1,27 @@
+@import '../../../styles/constants.scss';
+@import '../../../styles/colors.scss';
+@import '../../../styles/common.scss';
+@import '../../../styles/fonts.scss';
+
+.portfolio__container {
+    padding-top: 60px;
+    height: $portfolioSection-height;
+    background-color: $grey-background;
+    text-align: center;
+
+    &--title {
+        font-size: 1.8em;
+        font-weight: 400;
+    }
+
+    &--projects {
+        margin-top: 40px;
+
+        .list--item {
+            list-style: none;
+        }
+        .list--link {
+            text-decoration: none;
+        }
+    }
+}

@@ -6,14 +6,47 @@
 .about__container {
     // @include flex(row, center, center);
     // border: 1px solid black;
-    margin-top: 50px;
+    margin-top: 70px;
     height: $aboutSection-height;
     padding: 0 60px;
-    font-family: $montserrat;
+    text-align: center;
 
     &--title {
-        font-size: 1.5em;
+        // border: 1px solid black;
+        font-size: 1.8em;
         font-weight: 400;
-        font-family: $montserrat;
+    }
+
+    &--menu {
+        .content--menu {
+            // border: 1px solid black;
+            font-family: $montserrat;
+        }
+
+        .list--item {
+            list-style: none;
+            background: none;
+            border: 1.4px solid transparent;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            font-family: $montserrat;
+            font-weight: 300;
+            font-size: 1em;
+            padding: 10px 25px;
+        }
+
+        .list--item:hover {
+            cursor: pointer;
+        }
+
+        .active {
+            border: 1.4px solid #fad648;
+        }
+
+        .content--text {
+            // border: 1px solid black;
+            margin: 40px 300px;
+            text-align: left;
+        }
     }
 }

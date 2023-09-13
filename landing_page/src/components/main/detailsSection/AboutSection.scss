@@ -1,0 +1,19 @@
+@import '../../../styles/constants.scss';
+@import '../../../styles/colors.scss';
+@import '../../../styles/common.scss';
+@import '../../../styles/fonts.scss';
+
+.about__container {
+    // @include flex(row, center, center);
+    // border: 1px solid black;
+    margin-top: 50px;
+    height: $aboutSection-height;
+    padding: 0 60px;
+    font-family: $montserrat;
+
+    &--title {
+        font-size: 1.5em;
+        font-weight: 400;
+        font-family: $montserrat;
+    }
+}

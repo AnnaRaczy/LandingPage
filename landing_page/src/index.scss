@@ -12,5 +12,6 @@ body {
     font-family: $montserrat;
     font-style: normal;
     font-weight: 300;
-    background-color: $grey-background;
+    overflow-y: scroll;
+    // background-color: $white-common;
 }

@@ -16,11 +16,14 @@ export const CODEWARS = 'Codewars';
 export const TEXT_HELLO = 'Hello, I am Anna';
 export const TEXT_DEVELOPER = 'Frontend Developer';
 export const TEXT_INTRODUCTION =
-    'I design and create websites in JavaScript React environment... Varius quam quisque id diam vel quam Justo nec ultrices dui sapien eget mi proin sed. Mauris sit amet massa vitae. Mattis enim ut tellus elementum sagittis vitae. Felis bibendum ut tristique et egestas. Libero id faucibus nisl tincidunt eget nullam non nisi.Auctor augue mauris augue neque gravida in fermentum et. Nulla facilisi cras fermentum odio eu feugiat pretium. Laoreet sit amet cursus sit amet dictum sit.';
+    "I'm thrilled to introduce myself as a Frontend Developer with a passion for crafting user experiences. I specialize in using JavaScript/TypeScript, React, Sass and HTML5 to build modern web applications.";
 
-// Details Section
-export const ABOUT_ME = 'ABOUT ME';
+// About Section
+export const ABOUT_ME = 'About Me';
+export const ABOUT_ME_TEXT =
+    "With a broadening understanding of frontend technologies and best practices, I take pride in my ability to transform design concepts into fully functional and responsive interfaces. As an avid user of React, I find joy in architecting reusable and scalable components that facilitate smooth interactions and dynamic content updates. I benefit from using TypeScript for its strong typing to ensure code realibility and maintainability. When it comes to styling, I leverage the power of HTML5 and Sass to create visually appealing and well-organized layouts. I'm a continuous learner and in addition to my technical skills, I'm a great team player and believe in open communication and collaboration. I value feedback and actively contribute to brainstorming sessions to find the best solutions for every project. I am excited to be part of dynamic and challenging projects where I can leverage my avidity for growth.";
 export const SKILLS = 'SKILLS';
+export const WORK_HISTORY = 'WORK HISTORY';
 export const LANGUAGES = 'LANGUAGES';
 export const EDUCATION = 'EDUCATION';
 export const HOBBIES = 'HOBBIES';

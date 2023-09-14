@@ -3,54 +3,42 @@ import * as constants from '../../../utlis/constants';
 import { clsx } from 'clsx';
 import './AboutSection.scss';
 
-const Skills: React.FC = () => {
+const Experience: React.FC = () => {
     return (
-        <p className="text--section">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-            voluptatem ipsum magni. Quas, laboriosam quia laudantium impedit
-            omnis eaque autem facere maiores asperiores natus et iste cupiditate
-            dolorem neque, perferendis facilis culpa a explicabo. Minima
-            veritatis similique ad cumque sunt quidem ipsa mollitia accusamus,
-            minus facilis? Cum est necessitatibus aliquam provident vero illum
-            assumenda illo deserunt non. Praesentium, ea. Vero, eius sit. Fuga
-            aut culpa magni aspernatur non odio, aperiam vero repellendus ipsum
-            excepturi vel consectetur quibusdam repellat unde tenetur hic dolore
-            esse ipsa? Maiores repellat cumque labore fugit deserunt sed natus.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-            voluptatem ipsum magni. Quas, laboriosam quia laudantium impedit
-            omnis eaque autem facere maiores asperiores natus et iste cupiditate
-            dolorem neque, perferendis facilis culpa a explicabo. Minima
-            veritatis similique ad cumque sunt quidem ipsa mollitia accusamus,
-            minus facilis? Cum est necessitatibus aliquam provident vero illum
-            assumenda illo deserunt non. Praesentium, ea. Vero, eius sit. Fuga
-            aut culpa magni aspernatur non odio, aperiam vero repellendus ipsum
-            excepturi vel consectetur quibusdam repellat unde tenetur hic dolore
-            esse ipsa? Maiores repellat cumque labore fugit deserunt sed natus.
-        </p>
+        <div className="text__section">
+            <div className="text__section--item">
+                <p className="job--title">{`${constants.JOB_TITLE_CAP} | ${constants.CAP}`}</p>
+                <p className="experience--list">
+                    {constants.JOB_DESC_CAP.map((elem, i) => (
+                        <li key={i}>{elem}</li>
+                    ))}
+                </p>
+            </div>
+            <div className="text__section--item">
+                <p className="job--title">{`${constants.JOB_TITLE_AXA} | ${constants.AXA}`}</p>
+                <p className="experience--list">
+                    {constants.JOB_DESC_AXA.map((elem, i) => (
+                        <li key={i}>{elem}</li>
+                    ))}
+                </p>
+            </div>
+        </div>
     );
 };
-const History: React.FC = () => {
-    return <p className="text--section">History</p>;
-};
-const Languages: React.FC = () => {
-    return <p className="text--section">Languages</p>;
+const Skills: React.FC = () => {
+    return <p className="text--section">Skills</p>;
 };
 const Education: React.FC = () => {
     return <p className="text--section">Education</p>;
-};
-const Hobbies: React.FC = () => {
-    return <p className="text--section">Hobbies</p>;
 };
 
 const AboutList: React.FC = () => {
     const [active, setActive] = useState<undefined | number>(0);
 
     const listElements = {
+        Experience: constants.EXPERIENCE,
         Skills: constants.SKILLS,
-        Experience: constants.WORK_HISTORY,
-        Languages: constants.LANGUAGES,
         Education: constants.EDUCATION,
-        // Hobbies: constants.HOBBIES,
     };
 
     const handleClick = (i: number) => setActive(i);
@@ -58,19 +46,13 @@ const AboutList: React.FC = () => {
     let component;
     switch (active) {
         case 1:
-            component = <History />;
+            component = <Skills />;
             break;
         case 2:
-            component = <Languages />;
-            break;
-        case 3:
             component = <Education />;
             break;
-        case 4:
-            component = <Hobbies />;
-            break;
         default:
-            component = <Skills />;
+            component = <Experience />;
     }
 
     return (
@@ -81,14 +63,14 @@ const AboutList: React.FC = () => {
                 ).map((listElement, i) => (
                     <button
                         key={i}
-                        // className="list--item"
-                        // className={`list--item  ${active ? '-active' : ''}`}
                         className={clsx('list--item', {
                             active: active === i,
                         })}
                         onClick={() => handleClick(i)}
                     >
-                        <li key={i}>{listElement}</li>
+                        <li key={i} className={`list--item${i}`}>
+                            {listElement}
+                        </li>
                     </button>
                 ))}
             </ul>

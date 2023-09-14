@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as constants from '../../../utlis/constants';
 import './PortfolioSection.scss';
 

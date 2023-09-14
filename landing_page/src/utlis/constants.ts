@@ -23,10 +23,28 @@ export const ABOUT_ME = 'About Me';
 export const ABOUT_ME_TEXT =
     "With a broadening understanding of frontend technologies and best practices, I take pride in my ability to transform design concepts into fully functional and responsive interfaces. As an avid user of React, I find joy in architecting reusable and scalable components that facilitate smooth interactions and dynamic content updates. I benefit from using TypeScript for its strong typing to ensure code realibility and maintainability. When it comes to styling, I leverage the power of HTML5 and Sass to create visually appealing and well-organized layouts. I'm a continuous learner and in addition to my technical skills, I'm a great team player and believe in open communication and collaboration. I value feedback and actively contribute to brainstorming sessions to find the best solutions for every project. I am excited to be part of dynamic and challenging projects where I can leverage my avidity for growth.";
 export const SKILLS = 'Skills';
-export const WORK_HISTORY = 'WORK HISTORY';
-export const LANGUAGES = 'LANGUAGES';
-export const EDUCATION = 'EDUCATION';
-export const HOBBIES = 'HOBBIES';
+export const EXPERIENCE = 'Experience';
+export const EDUCATION = 'Education';
+export const JOB_TITLE_CAP = 'Software Engineer';
+export const JOB_TITLE_AXA = 'Analyst, Insurance Pricing';
+export const JOB_TITLE_CS = 'Expense Line Controller';
+export const JOB_TITLE_MAS = 'Medical Billing Officer';
+export const CAP = 'Capgemini';
+export const AXA = 'AXAL XL';
+export const CS = 'Credir Suisse';
+export const MAS = 'Medserv';
+export const JOB_DESC_CAP = [
+    'Utilized React for building reusable components and efficiently managing state using hooks',
+    'Employed TypeScript to enhance code quality',
+    'Utilized Sass to create maintainable and scalable stylesheets',
+    'Wrote unit tests using Jest',
+];
+export const JOB_DESC_AXA = [
+    'Created dashboards in R Shiny (with CSS, JavaScript)',
+    'Extracted source data from SQL',
+    'Data analysis in R',
+    'Maintained QlikView dashboards',
+];
 
 // Portfolio Section
 export const DONATE_YOUR_THINGS = 'Donate Your Things';

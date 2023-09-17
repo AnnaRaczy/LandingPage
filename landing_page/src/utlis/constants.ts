@@ -30,11 +30,12 @@ export const JOB_TITLE_AXA = 'Analyst, Insurance Pricing';
 export const JOB_TITLE_CS = 'Expense Line Controller';
 export const JOB_TITLE_MAS = 'Medical Billing Officer';
 export const CAP = 'Capgemini';
-export const AXA = 'AXAL XL';
-export const CS = 'Credir Suisse';
+export const AXA = 'AXA XL';
+export const CS = 'Credit Suisse';
 export const MAS = 'Medserv';
 export const JOB_DESC_CAP = [
-    'Utilized React for building reusable components and efficiently managing state using hooks',
+    'Utilized React for building reusable components',
+    'Efficiently managed state using hooks',
     'Employed TypeScript to enhance code quality',
     'Utilized Sass to create maintainable and scalable stylesheets',
     'Wrote unit tests using Jest',
@@ -45,6 +46,14 @@ export const JOB_DESC_AXA = [
     'Data analysis in R',
     'Maintained QlikView dashboards',
 ];
+export const YEARS_CAP = ' 2022 - Current';
+export const YEARS_AXA = ' 2018 - 2022';
+export const YEARS_CS = ' 2017 - 2018';
+export const YEARS_MAS = ' 2016 - 2017';
+
+export const TECHINCAL_SKILLS = 'Technical Skills:';
+export const COMPETENT = 'Competent: JavaScript, React, Sass, HTML5, Jest, Git';
+export const INTERMEDIATE = 'Intermediate: TypeScript, Node.js, Docker';
 
 // Portfolio Section
 export const DONATE_YOUR_THINGS = 'Donate Your Things';

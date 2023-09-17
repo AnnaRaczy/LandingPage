@@ -3,26 +3,82 @@ import * as constants from '../../../utlis/constants';
 import { clsx } from 'clsx';
 import './AboutSection.scss';
 
+type PropsExperience = {
+    job_title: string;
+    company: string;
+    years: string;
+    description: string[];
+};
+
+const Position: React.FC<PropsExperience> = ({
+    job_title,
+    company,
+    years,
+    description,
+}) => {
+    return (
+        <div className={`text__section--item company--${company}`}>
+            <div className="position__info">
+                <p className="job--title">{`${job_title} | ${company}`}</p>
+                <p className="job--years">{years}</p>
+            </div>
+            <p className="experience--list">
+                {description.map((elem, i) => (
+                    <li key={i}>{elem}</li>
+                ))}
+            </p>
+        </div>
+    );
+};
+const positionsData = ['CS', 'MAS'];
+
+const OtherPositions: React.FC = () => {
+    return (
+        <>
+            {positionsData.map((company) => (
+                <p>
+                    <span className="positions--older">
+                        {`constants.JOB_TITLE_${company}`} |{' '}
+                        {`constants.${company}`}
+                    </span>
+                    {`constants.YEARS_${company}`}
+                </p>
+            ))}
+            {/* <p>
+                <span className="positions--older">
+                    {constants.JOB_TITLE_CS} | {constants.CS}
+                </span>
+                {constants.YEARS_CS}
+            </p>
+            <p>
+                <span className="positions--older">
+                    {constants.JOB_TITLE_MAS} | {constants.MAS}
+                </span>
+                {constants.YEARS_MAS}
+            </p> */}
+        </>
+    );
+};
+
 const Experience: React.FC = () => {
     return (
-        <div className="text__section">
-            <div className="text__section--item">
-                <p className="job--title">{`${constants.JOB_TITLE_CAP} | ${constants.CAP}`}</p>
-                <p className="experience--list">
-                    {constants.JOB_DESC_CAP.map((elem, i) => (
-                        <li key={i}>{elem}</li>
-                    ))}
-                </p>
+        <>
+            <div className="text__section">
+                <Position
+                    job_title={constants.JOB_TITLE_CAP}
+                    company={constants.CAP}
+                    years={constants.YEARS_CAP}
+                    description={constants.JOB_DESC_CAP}
+                />
+                <Position
+                    job_title={constants.JOB_TITLE_AXA}
+                    company={constants.AXA}
+                    years={constants.YEARS_AXA}
+                    description={constants.JOB_DESC_AXA}
+                />
             </div>
-            <div className="text__section--item">
-                <p className="job--title">{`${constants.JOB_TITLE_AXA} | ${constants.AXA}`}</p>
-                <p className="experience--list">
-                    {constants.JOB_DESC_AXA.map((elem, i) => (
-                        <li key={i}>{elem}</li>
-                    ))}
-                </p>
-            </div>
-        </div>
+            <OtherPositions />
+        </>
     );
 };
 const Skills: React.FC = () => {
@@ -36,8 +92,8 @@ const AboutList: React.FC = () => {
     const [active, setActive] = useState<undefined | number>(0);
 
     const listElements = {
-        Experience: constants.EXPERIENCE,
         Skills: constants.SKILLS,
+        Experience: constants.EXPERIENCE,
         Education: constants.EDUCATION,
     };
 
@@ -46,13 +102,13 @@ const AboutList: React.FC = () => {
     let component;
     switch (active) {
         case 1:
-            component = <Skills />;
+            component = <Experience />;
             break;
         case 2:
             component = <Education />;
             break;
         default:
-            component = <Experience />;
+            component = <Skills />;
     }
 
     return (

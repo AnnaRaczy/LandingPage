@@ -19,7 +19,7 @@ const Position: React.FC<PropsExperience> = ({
     return (
         <div className={`text__section--item company--${company}`}>
             <div className="position__info">
-                <p className="job--title">{`${job_title} | ${company}`}</p>
+                <p className="title">{`${job_title} | ${company}`}</p>
                 <p className="job--years">{years}</p>
             </div>
             <p className="experience--list">
@@ -81,11 +81,73 @@ const Experience: React.FC = () => {
         </>
     );
 };
+
+const SoftSkills: React.FC = () => {
+    return (
+        <div className="text__section--item">
+            <p className="title">{constants.INTERPERSONAL_SKILLS}</p>
+            <p>{constants.SOFT_SKILLS}</p>
+        </div>
+    );
+};
+
+const TechnicalSkills: React.FC = () => {
+    return (
+        <div className="text__section--item">
+            <p className="title">{constants.TECHINCAL_SKILLS}</p>
+            <li className="skills--item">
+                <span className="skills">{constants.COMPETENT}</span>
+                {constants.COMPETENT_SKILLS}
+            </li>
+            <li className="skills--item">
+                <span className="skills">{constants.INTERMEDIATE}</span>
+                {constants.INTERMEDIATE_SKILLS}
+            </li>
+        </div>
+    );
+};
+
 const Skills: React.FC = () => {
-    return <p className="text--section">Skills</p>;
+    return (
+        <div className="text__section">
+            <TechnicalSkills />
+            <SoftSkills />
+        </div>
+    );
 };
 const Education: React.FC = () => {
-    return <p className="text--section">Education</p>;
+    return (
+        <div className="text__section">
+            <ul className="text__section--education">
+                <li>
+                    <span className="education--title">
+                        {constants.JS_COURSE}
+                    </span>
+                    <a
+                        className="certificate--link "
+                        href="https://drive.google.com/file/d/15mFzYQ5kj1WisJiyadzDkwjGxF7YFO-A/view?pli=1"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        {constants.CERTIFICATE}
+                    </a>
+                    <span className="year">{constants.CERTIFICATE_YEAR}</span>
+                </li>
+                <li>
+                    <span className="education--title">{constants.MASTER}</span>{' '}
+                    {constants.FACULTY}
+                    <span className="year">{constants.MASTER_YEAR}</span>
+                </li>
+                <li>
+                    <span className="education--title">
+                        {constants.BACHELOR}
+                    </span>{' '}
+                    {constants.FACULTY}
+                    <span className="year">{constants.BACHELOR_YEAR}</span>
+                </li>
+            </ul>
+        </div>
+    );
 };
 
 const AboutList: React.FC = () => {

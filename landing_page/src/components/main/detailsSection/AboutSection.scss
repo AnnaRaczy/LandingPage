@@ -20,7 +20,7 @@
         }
 
         .list--item {
-            list-style: none;
+            list-style-type: none;
             background: none;
             border: 1.4px solid transparent;
             margin: 10px;
@@ -53,6 +53,7 @@
             margin-bottom: 50px;
 
             &--item {
+                // border: 1px solid black;
                 padding: 0 30px;
                 width: 50%;
             }
@@ -65,15 +66,48 @@
                 display: flex;
                 justify-content: left;
             }
-            .job--title {
+            .title {
                 // border: 1px solid black;
                 font-size: 1.2em;
                 font-weight: 400;
                 margin-right: 30px;
             }
 
+            .skills {
+                font-weight: 400;
+                margin-right: 0.8em;
+            }
+
+            .skills--item {
+                list-style-type: none;
+                margin-bottom: 10px;
+            }
+
             .job--years {
                 line-height: 200%;
+            }
+
+            &--education {
+                list-style-type: none;
+
+                li {
+                    margin-bottom: 10px;
+                }
+                .education--title {
+                    font-weight: 400;
+                }
+
+                .certificate--link {
+                    // text-decoration: underline;
+                    text-decoration: none;
+                    border-bottom: 1px solid $black-background;
+                    margin-left: 10px;
+                    // color: $black-background;
+                }
+
+                .year {
+                    margin-left: 15px;
+                }
             }
         }
         .positions--older {

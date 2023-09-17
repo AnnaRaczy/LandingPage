@@ -52,8 +52,30 @@ export const YEARS_CS = ' 2017 - 2018';
 export const YEARS_MAS = ' 2016 - 2017';
 
 export const TECHINCAL_SKILLS = 'Technical Skills:';
-export const COMPETENT = 'Competent: JavaScript, React, Sass, HTML5, Jest, Git';
-export const INTERMEDIATE = 'Intermediate: TypeScript, Node.js, Docker';
+export const INTERPERSONAL_SKILLS = 'Interpersonal Skills:';
+export const COMPETENT = 'Competent: ';
+export const COMPETENT_SKILLS =
+    ' JavaScript, React, Sass, HTML5, Jest, Git, VSC';
+export const INTERMEDIATE = 'Intermediate: ';
+export const INTERMEDIATE_SKILLS = ' TypeScript, Node.js, Docker';
+export const SOFT_SKILLS =
+    'Receptive, versatile, self-motivated, problem solving, detail oriented';
+export const SOFT_SKILLS2 = [
+    'Receptive',
+    'Versatile',
+    'Self-motivated',
+    'Problem solving',
+    'Detail oriented',
+];
+export const JS_COURSE = 'Course: JavaScript | React Developer |';
+export const CERTIFICATE = 'Certificate';
+export const CERTIFICATE_YEAR = ' 2022';
+
+export const MASTER = 'Master of Science ';
+export const BACHELOR = 'Bachelor of Science';
+export const FACULTY = '| Biotechnology, University of Wrocław ';
+export const MASTER_YEAR = ' 2016';
+export const BACHELOR_YEAR = ' 2014';
 
 // Portfolio Section
 export const DONATE_YOUR_THINGS = 'Donate Your Things';

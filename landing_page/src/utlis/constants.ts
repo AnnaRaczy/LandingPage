@@ -80,4 +80,4 @@ export const BACHELOR_YEAR = ' 2014';
 // Portfolio Section
 export const DONATE_YOUR_THINGS = 'Donate Your Things';
 export const DONATE_DEMO = 'Donate Your Things - demo';
-export const CODERS_CREW = 'CodersCrew project';
+export const CODERS_CREW = 'CodersCrew projects';

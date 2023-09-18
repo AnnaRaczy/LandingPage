@@ -86,7 +86,10 @@ const SoftSkills: React.FC = () => {
     return (
         <div className="text__section--item">
             <p className="title">{constants.INTERPERSONAL_SKILLS}</p>
-            <p>{constants.SOFT_SKILLS}</p>
+            {/* <p>{constants.SOFT_SKILLS}</p> */}
+            {constants.SOFT_SKILLS2.map((skill) => (
+                <li className="skills--item">{skill}</li>
+            ))}
         </div>
     );
 };

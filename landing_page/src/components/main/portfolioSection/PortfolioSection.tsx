@@ -4,23 +4,29 @@ import './PortfolioSection.scss';
 
 const Projects: React.FC = () => {
     return (
-        <ul className="portfolio__container--projects">
-            <li className="list--item">
-                <a className="list--link" href="/">
-                    {constants.DONATE_YOUR_THINGS}
-                </a>
-            </li>
-            <li className="list--item">
-                <a className="list--link" href="/">
-                    {constants.DONATE_DEMO}
-                </a>
-            </li>
-            <li className="list--item">
-                <a className="list--link" href="/">
-                    {constants.CODERS_CREW}
-                </a>
-            </li>
-        </ul>
+        <div className="portfolio__container--projects">
+            <div className="container--photo"></div>
+            <ul className="">
+                <li className="list--item">
+                    <a
+                        className="list--link"
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://annaraczy.github.io/DonateYourThings/#/"
+                    >
+                        {constants.DONATE_YOUR_THINGS}
+                    </a>
+                </li>
+                <li className="list--item">
+                    <a className="list--link " href="/">
+                        {constants.DONATE_DEMO}
+                    </a>
+                </li>
+                <li className="list--item">
+                    <p>{constants.CODERS_CREW}</p>
+                </li>
+            </ul>
+        </div>
     );
 };
 

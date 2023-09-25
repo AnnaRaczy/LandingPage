@@ -5,7 +5,7 @@
 
 .intro__container {
     @include flex(row, center, center);
-    height: $introSection-height;
+    // height: $introSection-height;
     background-color: $grey-background;
 
     &--text {

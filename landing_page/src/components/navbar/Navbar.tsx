@@ -1,6 +1,6 @@
 import React, { useState, MouseEvent } from 'react';
-import * as constants from '../../utlis/constants';
-import * as enums from '../../utlis/enums';
+import * as constants from '../../utils/constants';
+import * as enums from '../../utils/enums';
 import { Icon } from '../common/icon';
 import './Navbar.scss';
 

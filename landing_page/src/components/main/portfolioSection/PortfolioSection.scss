@@ -4,7 +4,6 @@
 @import '../../../styles/fonts.scss';
 
 .portfolio__container {
-    // border: 1px solid black;
     padding-top: 60px;
     height: $portfolioSection-height;
     background-color: $grey-background;
@@ -13,17 +12,14 @@
     &--title {
         font-size: 1.8em;
         font-weight: 400;
-        // padding-bottom: 60px;
     }
 
     &--projects {
         @include flex(row, left, center);
         margin: 0 60px;
         margin-top: 40px;
-        // border: 1px solid black;
 
         .list--item {
-            // border: 1px solid black;
             list-style: none;
             position: relative;
             top: -65px;
@@ -33,13 +29,12 @@
         .list--link {
             text-decoration: none;
             border-bottom: 1px solid $gold-borders;
-            // margin-left: 10px;
         }
 
         .container--photo {
             position: relative;
             height: 550px;
-            width: 750px;
+            width: 800px;
             border-radius: 8px;
             background-image: url('../../../../public/images/donateYourThings2.png');
             background-size: 100% 100%;

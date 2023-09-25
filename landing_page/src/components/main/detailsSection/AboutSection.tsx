@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as constants from '../../../utlis/constants';
+import * as constants from '../../../utils/constants';
 import { clsx } from 'clsx';
 import './AboutSection.scss';
 
@@ -30,33 +30,20 @@ const Position: React.FC<PropsExperience> = ({
         </div>
     );
 };
-const positionsData = ['CS', 'MAS'];
 
 const OtherPositions: React.FC = () => {
     return (
-        <>
-            {positionsData.map((company) => (
-                <p>
-                    <span className="positions--older">
-                        {`constants.JOB_TITLE_${company}`} |{' '}
-                        {`constants.${company}`}
-                    </span>
-                    {`constants.YEARS_${company}`}
-                </p>
-            ))}
-            {/* <p>
-                <span className="positions--older">
-                    {constants.JOB_TITLE_CS} | {constants.CS}
-                </span>
-                {constants.YEARS_CS}
-            </p>
-            <p>
-                <span className="positions--older">
-                    {constants.JOB_TITLE_MAS} | {constants.MAS}
-                </span>
-                {constants.YEARS_MAS}
-            </p> */}
-        </>
+        <p>
+            <a
+                className="positions--older title"
+                href={constants.LINK_CODERSCREW}
+                target={constants.BLANK}
+                rel={constants.REL}
+            >
+                {constants.CODERSCREW}
+            </a>
+            {constants.YEARS_CODERSCREW}
+        </p>
     );
 };
 
@@ -86,26 +73,34 @@ const SoftSkills: React.FC = () => {
     return (
         <div className="text__section--item">
             <p className="title">{constants.INTERPERSONAL_SKILLS}</p>
-            {/* <p>{constants.SOFT_SKILLS}</p> */}
-            {constants.SOFT_SKILLS2.map((skill) => (
+            {constants.SOFT_SKILLS.map((skill) => (
                 <li className="skills--item">{skill}</li>
             ))}
         </div>
     );
 };
 
+const skillsData = [
+    {
+        level: constants.COMPETENT,
+        skills: constants.COMPETENT_SKILLS,
+    },
+    {
+        level: constants.INTERMEDIATE,
+        skills: constants.INTERMEDIATE_SKILLS,
+    },
+];
+
 const TechnicalSkills: React.FC = () => {
     return (
         <div className="text__section--item">
             <p className="title">{constants.TECHINCAL_SKILLS}</p>
-            <li className="skills--item">
-                <span className="skills">{constants.COMPETENT}</span>
-                {constants.COMPETENT_SKILLS}
-            </li>
-            <li className="skills--item">
-                <span className="skills">{constants.INTERMEDIATE}</span>
-                {constants.INTERMEDIATE_SKILLS}
-            </li>
+            {skillsData.map((value) => (
+                <li className="skills--item">
+                    <span className="skills">{value.level}</span>
+                    {value.skills}
+                </li>
+            ))}
         </div>
     );
 };
@@ -118,36 +113,49 @@ const Skills: React.FC = () => {
         </div>
     );
 };
+
+const EducationCourse: React.FC = () => {
+    return (
+        <li>
+            <span className="education--title">{constants.JS_COURSE}</span>
+            <a
+                className="certificate--link "
+                href={constants.LINK_CERTIFICATE}
+                target={constants.BLANK}
+                rel={constants.REL}
+            >
+                {constants.CERTIFICATE}
+            </a>
+            <span className="year">{constants.CERTIFICATE_YEAR}</span>
+        </li>
+    );
+};
+
+const educationData = [
+    {
+        title: constants.MASTER,
+        faculty: constants.FACULTY,
+        year: constants.MASTER_YEAR,
+    },
+    {
+        title: constants.BACHELOR,
+        faculty: constants.FACULTY,
+        year: constants.BACHELOR_YEAR,
+    },
+];
+
 const Education: React.FC = () => {
     return (
         <div className="text__section">
             <ul className="text__section--education">
-                <li>
-                    <span className="education--title">
-                        {constants.JS_COURSE}
-                    </span>
-                    <a
-                        className="certificate--link "
-                        href="https://drive.google.com/file/d/15mFzYQ5kj1WisJiyadzDkwjGxF7YFO-A/view?pli=1"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        {constants.CERTIFICATE}
-                    </a>
-                    <span className="year">{constants.CERTIFICATE_YEAR}</span>
-                </li>
-                <li>
-                    <span className="education--title">{constants.MASTER}</span>{' '}
-                    {constants.FACULTY}
-                    <span className="year">{constants.MASTER_YEAR}</span>
-                </li>
-                <li>
-                    <span className="education--title">
-                        {constants.BACHELOR}
-                    </span>{' '}
-                    {constants.FACULTY}
-                    <span className="year">{constants.BACHELOR_YEAR}</span>
-                </li>
+                <EducationCourse />
+                {educationData.map((value) => (
+                    <li>
+                        <span className="education--title">{value.title}</span>{' '}
+                        {value.faculty}
+                        <span className="year">{value.year}</span>
+                    </li>
+                ))}
             </ul>
         </div>
     );
@@ -157,8 +165,8 @@ const AboutList: React.FC = () => {
     const [active, setActive] = useState<undefined | number>(0);
 
     const listElements = {
-        Skills: constants.SKILLS,
         Experience: constants.EXPERIENCE,
+        Skills: constants.SKILLS,
         Education: constants.EDUCATION,
     };
 
@@ -167,13 +175,13 @@ const AboutList: React.FC = () => {
     let component;
     switch (active) {
         case 1:
-            component = <Experience />;
+            component = <Skills />;
             break;
         case 2:
             component = <Education />;
             break;
         default:
-            component = <Skills />;
+            component = <Experience />;
     }
 
     return (

@@ -46,7 +46,7 @@ const Title: React.FC = () => {
 
 export const PortfolioSection: React.FC = () => {
     return (
-        <div className="portfolio__container">
+        <div className="portfolio__container" id="portfolio">
             <Title />
             <Projects />
         </div>

@@ -10,13 +10,12 @@ export enum IconsHover {
 }
 export enum Address {
     GITHUB = 'https://github.com/AnnaRaczy',
-    LINKEDIN = 'https://www.linkedin.com/',
-    EMAIL = '',
+    LINKEDIN = 'https://www.linkedin.com/in/anna-raczynska/',
+    EMAIL = 'mailto:raczynska.ak@gmail.com',
 }
 
 export enum Menu {
-    HOME = '/',
-    ABOUT = '/',
-    PORTFOLIO = '/',
-    CODEWARS = 'https://www.codewars.com/users/ann@r/completed_solutions',
+    ABOUT = '#about',
+    PORTFOLIO = '#portfolio',
+    CODEWARS = 'https://www.codewars.com/users/ann@r/completed',
 }

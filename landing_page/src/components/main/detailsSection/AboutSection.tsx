@@ -214,7 +214,7 @@ const Title: React.FC = () => {
 
 export const AboutSection: React.FC = () => {
     return (
-        <section className="about__container" data-testid="about">
+        <section className="about__container" id="about">
             <Title />
             <AboutList />
         </section>

@@ -3,12 +3,21 @@ export const ICON_EXTENSION = '.svg';
 export const BLANK = '_blank';
 export const REL = 'noreferrer';
 
+export const MY_EMAIL = 'raczynska.ak@gmail.com';
+export const CLICK_EMAIL = 'Click to copy email to the clickboard';
+export const EMAIL_COPIED = 'Email copied: raczynska.ak@gmail.com';
+
 export const NAME = 'ANNA ';
 export const LAST_NAME = 'RACZYŃSKA';
-export const HOME = 'Home';
-export const ABOUT = 'About Me';
-export const PORTFOLIO = 'Portfolio';
-export const CODEWARS = 'Codewars';
+export const ABOUT = 'ABOUT';
+export const PORTFOLIO = 'PORTFOLIO';
+export const CODEWARS = 'CODEWARS';
+export const LINK_CODEWARS = 'https://www.codewars.com/users/ann@r/completed';
+export const LINK_CODEWARS_BADGE =
+    'https://www.codewars.com/users/ann@r/badges/micro';
+
+export const ABOUT_SCROLL = 'about';
+export const PORTFOLIO_SCROLL = 'portfolio';
 
 export const TEXT_HELLO = 'Hello, I am Anna';
 export const TEXT_DEVELOPER = 'Frontend Developer';

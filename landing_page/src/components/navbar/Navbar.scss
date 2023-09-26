@@ -30,6 +30,12 @@
         .icon__common:hover {
             cursor: pointer;
         }
+
+        &--email {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+        }
     }
 }
 

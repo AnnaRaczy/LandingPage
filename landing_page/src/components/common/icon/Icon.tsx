@@ -1,6 +1,5 @@
 import React from 'react';
 import * as constants from '../../../utils/constants';
-import './Icon.scss';
 
 type IconPropsType = {
     name: string;

@@ -73,8 +73,10 @@ const SoftSkills: React.FC = () => {
     return (
         <div className="text__section--item">
             <p className="title">{constants.INTERPERSONAL_SKILLS}</p>
-            {constants.SOFT_SKILLS.map((skill) => (
-                <li className="skills--item">{skill}</li>
+            {constants.SOFT_SKILLS.map((skill, i) => (
+                <li key={i} className="skills--item">
+                    {skill}
+                </li>
             ))}
         </div>
     );
@@ -95,9 +97,11 @@ const TechnicalSkills: React.FC = () => {
     return (
         <div className="text__section--item">
             <p className="title">{constants.TECHINCAL_SKILLS}</p>
-            {skillsData.map((value) => (
+            {skillsData.map((value, i) => (
                 <li className="skills--item">
-                    <span className="skills">{value.level}</span>
+                    <span key={i} className="skills">
+                        {value.level}
+                    </span>
                     {value.skills}
                 </li>
             ))}
@@ -149,8 +153,8 @@ const Education: React.FC = () => {
         <div className="text__section">
             <ul className="text__section--education">
                 <EducationCourse />
-                {educationData.map((value) => (
-                    <li>
+                {educationData.map((value, i) => (
+                    <li key={i}>
                         <span className="education--title">{value.title}</span>{' '}
                         {value.faculty}
                         <span className="year">{value.year}</span>

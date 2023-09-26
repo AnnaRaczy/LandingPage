@@ -23,8 +23,8 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start-client": "react-scripts start",
-        "build-client": "node node_modules/react-scripts/scripts/build.js",
+        "start": "react-scripts start",
+        "build": "node node_modules/react-scripts/scripts/build.js",
         "test-client": "jest src",
         "test-client:coverage": "jest src --coverage --updateSnapshot",
         "test-server:coverage": "jest server --coverage",

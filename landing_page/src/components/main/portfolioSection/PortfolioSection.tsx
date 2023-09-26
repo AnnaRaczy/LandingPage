@@ -18,8 +18,8 @@ const Projects: React.FC = () => {
         <div className="portfolio__container--projects">
             <div className="container--photo"></div>
             <ul>
-                {projectsData.map((value) => (
-                    <li className="list--item">
+                {projectsData.map((value, i) => (
+                    <li className="list--item" key={i}>
                         <a
                             className="list--link"
                             href={value.link}

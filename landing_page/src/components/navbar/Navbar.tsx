@@ -30,8 +30,9 @@ const buttonsData = [
 const MenuButtons: React.FC = () => {
     return (
         <>
-            {buttonsData.map((value) => (
+            {buttonsData.map((value, i) => (
                 <LinkScroll
+                    key={i}
                     to={value.scroll}
                     spy={true}
                     smooth={true}
